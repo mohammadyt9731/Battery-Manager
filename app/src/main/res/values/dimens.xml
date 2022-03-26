@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <dimen name="space_2x_small">@dimen/_1sdp</dimen>
+        <dimen name="space_x_small">@dimen/_3sdp</dimen>
+        <dimen name="space_small">@dimen/_5sdp</dimen>
+        <dimen name="space_medium">@dimen/_10sdp</dimen>
+        <dimen name="space_middle">@dimen/_15sdp</dimen>
+        <dimen name="space_large">@dimen/_20sdp</dimen>
+        <dimen name="space_x_large">@dimen/_25sdp</dimen>
+        <dimen name="space_2x_large">@dimen/_35sdp</dimen>
+        <dimen name="space_3x_large">@dimen/_40sdp</dimen>
+
+        <dimen name="text_size_10">@dimen/_10ssp</dimen>
+        <dimen name="text_size_12">@dimen/_12ssp</dimen>
+        <dimen name="text_size_14">@dimen/_14ssp</dimen>
+        <dimen name="text_size_16">@dimen/_16ssp</dimen>
+        <dimen name="text_size_18">@dimen/_18ssp</dimen>
+        <dimen name="text_size_20">@dimen/_20ssp</dimen>
+        <dimen name="text_size_22">@dimen/_22ssp</dimen>
+        <dimen name="text_size_24">@dimen/_24ssp</dimen>
+        <dimen name="text_size_26">@dimen/_26ssp</dimen>
+        <dimen name="text_size_28">@dimen/_28ssp</dimen>
+        <dimen name="text_size_30">@dimen/_30ssp</dimen>
+</resources>
