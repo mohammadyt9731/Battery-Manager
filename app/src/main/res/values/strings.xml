@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Battery Manager</string>
-    <string name="version_code">version : 1.0.0</string>
+    <string name="version_code">version 1.0.0</string>
+    <string name="developed_by">Developed By Mohammad</string>
 </resources>
