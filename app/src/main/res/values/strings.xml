@@ -2,4 +2,9 @@
     <string name="app_name">Battery Manager</string>
     <string name="version_code">version 1.0.0</string>
     <string name="developed_by">Developed By Mohammad</string>
+    <string name="time_left">Time left</string>
+    <string name="time">2h 33m</string>
+    <string name="Temperature">temperature</string>
+    <string name="Voltage">voltage</string>
+    <string name="capacity">Capacity</string>
 </resources>

@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/programming/Android/BatteryManager/app/src/main/res/layout/activity_main.xml" value="0.25625" />
+        <entry key="..\:/programming/Android/BatteryManager/app/src/main/res/drawable/bg_top_rounded.xml" value="0.18" />
+        <entry key="..\:/programming/Android/BatteryManager/app/src/main/res/layout/activity_main.xml" value="0.37401574803149606" />
         <entry key="..\:/programming/Android/BatteryManager/app/src/main/res/layout/activity_splash.xml" value="0.25625" />
       </map>
     </option>

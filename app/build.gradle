@@ -29,6 +29,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+
 }
 
 dependencies {
@@ -43,4 +49,5 @@ dependencies {
     implementation 'com.airbnb.android:lottie:5.0.3'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
 }
