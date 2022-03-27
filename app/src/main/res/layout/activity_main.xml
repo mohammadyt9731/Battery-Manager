@@ -10,65 +10,64 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
         android:textColor="@color/white_800"
         android:textSize="@dimen/text_size_18"
-        android:text="@string/app_name"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="@id/gl_horizontal_1"/>
+        app:layout_constraintTop_toTopOf="@id/gl_horizontal_1" />
 
 
     <com.mikhaellopez.circularprogressbar.CircularProgressBar
 
-       app:layout_constraintTop_toTopOf="@id/gl_horizontal_2"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/gl_horizontal_4"
         android:id="@+id/circularProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:cpb_background_progressbar_color="@color/gray"
         app:cpb_background_progressbar_width="10dp"
-        app:cpb_progress_direction="to_right"
         app:cpb_progress="10"
+        app:cpb_progress_direction="to_right"
         app:cpb_progressbar_color="@color/green"
         app:cpb_progressbar_width="15dp"
-        app:cpb_round_border="true" />
+        app:cpb_round_border="true"
+        app:layout_constraintBottom_toBottomOf="@id/gl_horizontal_4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gl_horizontal_2" />
 
     <TextView
         android:id="@+id/tv_charge_percentage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="60%"
         android:textColor="@color/white_800"
         android:textSize="@dimen/_42ssp"
         android:textStyle="bold"
-        android:text="60%"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="@id/gl_horizontal_3"/>
+        app:layout_constraintTop_toTopOf="@id/gl_horizontal_3" />
+
     <TextView
         android:id="@+id/tv_time_left"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/time_left"
         android:textColor="@color/white_800"
         android:textSize="@dimen/text_size_18"
         android:textStyle="bold"
-        android:text="@string/time_left"
-        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@id/gl_horizontal_4"
-        app:layout_constraintTop_toBottomOf="@id/gl_horizontal_3"
-        />
+        app:layout_constraintTop_toBottomOf="@id/gl_horizontal_3" />
 
     <TextView
         android:id="@+id/tv_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_small"
+        android:gravity="center"
+        android:text="@string/time"
         android:textColor="@color/white_800"
         android:textSize="@dimen/text_size_16"
         android:textStyle="bold"
-        android:text="@string/time"
-        android:gravity="center"
-        android:layout_marginTop="@dimen/space_small"
-        app:layout_constraintTop_toBottomOf="@id/tv_time_left"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tv_time_left" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_horizontal_1"
@@ -97,25 +96,28 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_horizontal_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.57" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_horizontal_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.58" />
+        app:layout_constraintGuide_percent="0.64" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_horizontal_7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.92" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_vertical_left"
@@ -135,159 +137,227 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="@id/gl_horizontal_5"
+        android:background="@drawable/bg_top_rounded"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@drawable/bg_top_rounded">
+        app:layout_constraintTop_toTopOf="@id/gl_horizontal_5" />
 
-    </View>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_small"
+        android:gravity="center"
+        android:text="@string/battery_condition"
+        android:textColor="@color/white_800"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintTop_toTopOf="@id/gl_horizontal_5" />
+
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:backgroundTint="@color/dark"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/gl_horizontal_7"
         app:layout_constraintLeft_toLeftOf="@id/gl_vertical_left"
         app:layout_constraintRight_toRightOf="@id/gl_vertical_right"
-        app:layout_constraintTop_toTopOf="@id/gl_horizontal_6"
-        android:backgroundTint="@color/dark"
-        app:cardElevation="10dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="@id/gl_horizontal_7">
+        app:layout_constraintTop_toTopOf="@id/gl_horizontal_6">
 
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingVertical="@dimen/space_middle">
-
-        <TextView
-            android:id="@+id/tv_temperature"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white_700"
-            android:textSize="@dimen/text_size_14"
-            android:text="@string/Temperature"
-            android:gravity="center"
-            app:layout_constraintTop_toTopOf="parent"
-           app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/view_divider_left"
-
-
-            />
-        <TextView
-            android:id="@+id/tv_temperature_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="31.6"
-            android:textColor="@color/green"
-            android:textSize="@dimen/text_size_16"
-            app:layout_constraintTop_toBottomOf="@id/tv_voltage"
-            app:layout_constraintRight_toLeftOf="@id/tv_temperature_unit"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-        <TextView
-            android:id="@+id/tv_temperature_unit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="°C"
-            android:textColor="@color/white_700"
-            android:textSize="@dimen/text_size_16"
-
-            app:layout_constraintLeft_toRightOf="@+id/tv_temperature_value"
-            app:layout_constraintTop_toBottomOf="@id/tv_voltage"
-            app:layout_constraintRight_toLeftOf="@id/view_divider_left"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-
-        <View
-            android:id="@+id/view_divider_left"
-            android:layout_width="2dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/dark_gray"
-            app:layout_constraintRight_toLeftOf="@id/view_divider_right"
-            app:layout_constraintLeft_toLeftOf="parent"/>
+            android:paddingVertical="@dimen/space_middle">
 
-        <TextView
-            android:id="@+id/tv_voltage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Voltage"
-            android:textColor="@color/white_700"
-            android:textSize="@dimen/text_size_14"
-            app:layout_constraintRight_toLeftOf="@+id/view_divider_right"
-            app:layout_constraintLeft_toRightOf="@+id/view_divider_left"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_temperature"
+                style="@style/tv_battery_information"
+                android:text="@string/Temperature"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/view_divider_left"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_voltage_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4.3"
-            android:textColor="@color/green"
-            android:textSize="@dimen/text_size_16"
-            app:layout_constraintTop_toBottomOf="@id/tv_voltage"
-           app:layout_constraintRight_toLeftOf="@id/tv_voltage_unit"
-            app:layout_constraintLeft_toLeftOf="@id/view_divider_left"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-        <TextView
-            android:id="@+id/tv_voltage_unit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="V"
-            android:textColor="@color/white_700"
-            android:textSize="@dimen/text_size_16"
+            <LinearLayout
 
-            app:layout_constraintLeft_toRightOf="@+id/tv_voltage_value"
-            app:layout_constraintTop_toBottomOf="@id/tv_voltage"
-            app:layout_constraintRight_toLeftOf="@id/view_divider_right"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
+                style="@style/ll_information"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/view_divider_left"
+                app:layout_constraintTop_toBottomOf="@id/tv_temperature">
 
-        <View
-            android:id="@+id/view_divider_right"
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/dark_gray"
-            app:layout_constraintLeft_toRightOf="@id/view_divider_left"
-            app:layout_constraintRight_toRightOf="parent"/>
-        <TextView
-            android:id="@+id/tv_capacity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white_700"
-            android:textSize="@dimen/text_size_14"
-            android:text="@string/capacity"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/view_divider_right"
-            />
-        <TextView
-            android:id="@+id/tv_capacity_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1512"
-            android:textColor="@color/green"
-            android:textSize="@dimen/text_size_16"
-           app:layout_constraintRight_toLeftOf="@id/tv_capacity_unit"
-            app:layout_constraintTop_toBottomOf="@id/tv_capacity"
-            app:layout_constraintLeft_toLeftOf="@id/view_divider_right"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-        <TextView
-            android:id="@+id/tv_capacity_unit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="mAh"
-            android:textColor="@color/white_700"
-            android:textSize="@dimen/text_size_16"
-            app:layout_constraintLeft_toRightOf="@+id/tv_capacity_value"
-            app:layout_constraintTop_toBottomOf="@id/tv_capacity"
-          app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
+                <TextView
+                    android:id="@+id/tv_temperature_value"
+                    style="@style/tv_info_value"
+                    android:text="@string/sample_temperature" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_temperature_unit"
+                    style="@style/tv_info_unit"
+                    android:text="@string/temperature_unit" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_divider_left"
+                style="@style/view_divider"
+                app:layout_constraintBottom_toBottomOf="@id/ll_capacity"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/view_divider_right"
+                app:layout_constraintTop_toTopOf="@id/tv_temperature" />
+
+            <TextView
+                android:id="@+id/tv_voltage"
+                style="@style/tv_battery_information"
+                android:text="@string/Voltage"
+                app:layout_constraintLeft_toRightOf="@+id/view_divider_left"
+                app:layout_constraintRight_toLeftOf="@+id/view_divider_right"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                style="@style/ll_information"
+                app:layout_constraintLeft_toRightOf="@id/view_divider_left"
+                app:layout_constraintRight_toLeftOf="@id/view_divider_right"
+                app:layout_constraintTop_toBottomOf="@id/tv_voltage">
+
+                <TextView
+                    android:id="@+id/tv_voltage_value"
+                    style="@style/tv_info_value"
+                    android:text="@string/sample_voltage" />
+
+                <TextView
+                    android:id="@+id/tv_voltage_unit"
+                    style="@style/tv_info_unit"
+                    android:text="@string/voltage_unit" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_divider_right"
+                style="@style/view_divider"
+                app:layout_constraintBottom_toBottomOf="@id/ll_capacity"
+                app:layout_constraintLeft_toRightOf="@id/view_divider_left"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_temperature" />
+
+            <TextView
+                android:id="@+id/tv_capacity"
+                style="@style/tv_battery_information"
+                android:text="@string/capacity"
+                app:layout_constraintLeft_toRightOf="@id/view_divider_right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_capacity"
+                style="@style/ll_information"
+                app:layout_constraintLeft_toRightOf="@id/view_divider_right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_capacity">
+
+                <TextView
+                    android:id="@+id/tv_capacity_value"
+                    style="@style/tv_info_value"
+                    android:text="@string/sample_capacity" />
+
+                <TextView
+                    android:id="@+id/tv_capacity_unit"
+                    style="@style/tv_info_unit"
+                    android:text="@string/capacity_unit" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_divider_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/space_medium"
+                android:layout_marginVertical="@dimen/space_middle"
+                android:background="@color/dark_gray"
+                app:layout_constraintTop_toBottomOf="@id/ll_capacity" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_technology"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginLeft="@dimen/space_small"
+                    android:src="@drawable/ic_technology"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_technology"
+                    style="@style/ll_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/iv_technology"
+                    app:layout_constraintRight_toLeftOf="@id/view_divider_center"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_technology"
+                        style="@style/tv_battery_information"
+                        android:text="@string/technology"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/view_divider_center"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_technology_type"
+                        style="@style/tv_info_value"
+                        android:text="@string/li_ion" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_divider_center"
+                    style="@style/view_divider"
+                    app:layout_constraintBottom_toBottomOf="@id/ll_technology"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ll_technology" />
+
+                <ImageView
+                    android:id="@+id/iv_plug_state"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginLeft="@dimen/space_small"
+                    android:src="@drawable/ic_plug_state"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/view_divider_center"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    style="@style/ll_vertical"
+                    app:layout_constraintBaseline_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/iv_plug_state"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_plug_state"
+                        style="@style/tv_battery_information"
+                        android:text="@string/plug_state"
+                        app:layout_constraintLeft_toRightOf="@+id/view_divider_left"
+                        app:layout_constraintRight_toLeftOf="@+id/view_divider_right"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_plug"
+                        style="@style/tv_info_value"
+                        android:text="@string/plug_out" />
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </com.google.android.material.card.MaterialCardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,4 +7,15 @@
     <string name="Temperature">temperature</string>
     <string name="Voltage">voltage</string>
     <string name="capacity">Capacity</string>
+    <string name="sample_temperature">31.6</string>
+    <string name="temperature_unit">°C</string>
+    <string name="sample_voltage">4.3</string>
+    <string name="voltage_unit">V</string>
+    <string name="sample_capacity">1512</string>
+    <string name="capacity_unit">mAh</string>
+    <string name="battery_condition">Battery condition</string>
+    <string name="technology">Technology</string>
+    <string name="li_ion">Li_ion</string>
+    <string name="plug_state">Plug state</string>
+    <string name="plug_out">plug out</string>
 </resources>
