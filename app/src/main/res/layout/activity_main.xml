@@ -24,50 +24,37 @@
         android:layout_height="0dp"
         app:cpb_background_progressbar_color="@color/gray"
         app:cpb_background_progressbar_width="10dp"
-        app:cpb_progress="10"
+        app:cpb_progress="60"
         app:cpb_progress_direction="to_right"
         app:cpb_progressbar_color="@color/green"
-        app:cpb_progressbar_width="15dp"
+        app:cpb_progressbar_width="@dimen/space_medium"
         app:cpb_round_border="true"
         app:layout_constraintBottom_toBottomOf="@id/gl_horizontal_4"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/gl_vertical_left2"
+        app:layout_constraintRight_toRightOf="@id/gl_vertical_right2"
         app:layout_constraintTop_toTopOf="@id/gl_horizontal_2" />
 
     <TextView
         android:id="@+id/tv_charge_percentage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="60%"
+        android:text="@string/sample_battery_level"
         android:textColor="@color/white_800"
-        android:textSize="@dimen/_42ssp"
+        android:textSize="@dimen/_40ssp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/gl_horizontal_3" />
 
-    <TextView
-        android:id="@+id/tv_time_left"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/time_left"
-        android:textColor="@color/white_800"
-        android:textSize="@dimen/text_size_18"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/gl_horizontal_4"
-        app:layout_constraintTop_toBottomOf="@id/gl_horizontal_3" />
-
-    <TextView
-        android:id="@+id/tv_time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_small"
-        android:gravity="center"
-        android:text="@string/time"
-        android:textColor="@color/white_800"
-        android:textSize="@dimen/text_size_16"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/tv_time_left" />
+    <ImageView
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:src="@drawable/ic_battery"
+        app:layout_constraintTop_toBottomOf="@id/tv_charge_percentage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:rotation="-10"
+        android:layout_marginTop="@dimen/space_small"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_horizontal_1"
@@ -95,28 +82,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_horizontal_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.57" />
+        app:layout_constraintGuide_percent="0.54" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_horizontal_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.64" />
+        app:layout_constraintGuide_percent="0.61" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_horizontal_7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.92" />
+        app:layout_constraintGuide_percent="0.9" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -127,11 +114,25 @@
         app:layout_constraintGuide_percent="0.03" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_vertical_left2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_vertical_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_vertical_right2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
 
 
     <View
@@ -155,11 +156,10 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/dark"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
-        app:layout_constraintBottom_toBottomOf="@id/gl_horizontal_7"
         app:layout_constraintLeft_toLeftOf="@id/gl_vertical_left"
         app:layout_constraintRight_toRightOf="@id/gl_vertical_right"
         app:layout_constraintTop_toTopOf="@id/gl_horizontal_6">
@@ -167,11 +167,11 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:paddingVertical="@dimen/space_middle">
 
             <TextView
-                android:id="@+id/tv_temperature"
+                android:id="@+id/tv_temperature_label"
                 style="@style/tv_battery_information"
                 android:text="@string/Temperature"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -183,10 +183,10 @@
                 style="@style/ll_information"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/view_divider_left"
-                app:layout_constraintTop_toBottomOf="@id/tv_temperature">
+                app:layout_constraintTop_toBottomOf="@id/tv_temperature_label">
 
                 <TextView
-                    android:id="@+id/tv_temperature_value"
+                    android:id="@+id/tv_temperature"
                     style="@style/tv_info_value"
                     android:text="@string/sample_temperature" />
 
@@ -202,10 +202,10 @@
                 app:layout_constraintBottom_toBottomOf="@id/ll_capacity"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/view_divider_right"
-                app:layout_constraintTop_toTopOf="@id/tv_temperature" />
+                app:layout_constraintTop_toTopOf="@id/tv_temperature_label" />
 
             <TextView
-                android:id="@+id/tv_voltage"
+                android:id="@+id/tv_voltage_label"
                 style="@style/tv_battery_information"
                 android:text="@string/Voltage"
                 app:layout_constraintLeft_toRightOf="@+id/view_divider_left"
@@ -216,10 +216,10 @@
                 style="@style/ll_information"
                 app:layout_constraintLeft_toRightOf="@id/view_divider_left"
                 app:layout_constraintRight_toLeftOf="@id/view_divider_right"
-                app:layout_constraintTop_toBottomOf="@id/tv_voltage">
+                app:layout_constraintTop_toBottomOf="@id/tv_voltage_label">
 
                 <TextView
-                    android:id="@+id/tv_voltage_value"
+                    android:id="@+id/tv_voltage"
                     style="@style/tv_info_value"
                     android:text="@string/sample_voltage" />
 
@@ -235,10 +235,10 @@
                 app:layout_constraintBottom_toBottomOf="@id/ll_capacity"
                 app:layout_constraintLeft_toRightOf="@id/view_divider_left"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tv_temperature" />
+                app:layout_constraintTop_toTopOf="@id/tv_temperature_label" />
 
             <TextView
-                android:id="@+id/tv_capacity"
+                android:id="@+id/tv_capacity_label"
                 style="@style/tv_battery_information"
                 android:text="@string/capacity"
                 app:layout_constraintLeft_toRightOf="@id/view_divider_right"
@@ -250,10 +250,10 @@
                 style="@style/ll_information"
                 app:layout_constraintLeft_toRightOf="@id/view_divider_right"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_capacity">
+                app:layout_constraintTop_toBottomOf="@id/tv_capacity_label">
 
                 <TextView
-                    android:id="@+id/tv_capacity_value"
+                    android:id="@+id/tv_capacity"
                     style="@style/tv_info_value"
                     android:text="@string/sample_capacity" />
 
@@ -271,14 +271,16 @@
                 android:layout_marginHorizontal="@dimen/space_medium"
                 android:layout_marginVertical="@dimen/space_middle"
                 android:background="@color/dark_gray"
-                app:layout_constraintTop_toBottomOf="@id/ll_capacity" />
+               app:layout_constraintTop_toBottomOf="@id/ll_capacity"
+               />
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-
+                android:layout_marginTop="@dimen/space_medium"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent">
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/view_divider_horizontal"
+                >
 
                 <ImageView
                     android:id="@+id/iv_technology"
@@ -299,7 +301,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
-                        android:id="@+id/tv_technology"
+                        android:id="@+id/tv_technology_label"
                         style="@style/tv_battery_information"
                         android:text="@string/technology"
                         app:layout_constraintLeft_toLeftOf="parent"
@@ -307,7 +309,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/tv_technology_type"
+                        android:id="@+id/tv_technology"
                         style="@style/tv_info_value"
                         android:text="@string/li_ion" />
                 </LinearLayout>
@@ -339,7 +341,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
-                        android:id="@+id/tv_plug_state"
+                        android:id="@+id/tv_plug_state_label"
                         style="@style/tv_battery_information"
                         android:text="@string/plug_state"
                         app:layout_constraintLeft_toRightOf="@+id/view_divider_left"
@@ -347,7 +349,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/tv_plug"
+                        android:id="@+id/tv_plug_state"
                         style="@style/tv_info_value"
                         android:text="@string/plug_out" />
                 </LinearLayout>

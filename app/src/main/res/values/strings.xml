@@ -18,4 +18,6 @@
     <string name="li_ion">Li_ion</string>
     <string name="plug_state">Plug state</string>
     <string name="plug_out">plug out</string>
+    <string name="plug_in">plug in</string>
+    <string name="sample_battery_level">60%</string>
 </resources>

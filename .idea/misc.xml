@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/programming/Android/BatteryManager/app/src/main/res/drawable/bg_top_rounded.xml" value="0.18" />
+        <entry key="..\:/programming/Android/BatteryManager/app/src/main/res/drawable/ic_battery.xml" value="0.151" />
         <entry key="..\:/programming/Android/BatteryManager/app/src/main/res/drawable/ic_plug_state.xml" value="0.151" />
         <entry key="..\:/programming/Android/BatteryManager/app/src/main/res/drawable/ic_technology.xml" value="0.151" />
         <entry key="..\:/programming/Android/BatteryManager/app/src/main/res/layout/activity_main.xml" value="0.25" />
